@@ -1,7 +1,8 @@
 const express = require('express')
 const winston = require('winston');
-const app = express()
 const port = 3000
+
+const app = express().use(express.json())
 
 const logger = winston.createLogger({
   level: 'info',
@@ -17,7 +18,12 @@ const logger = winston.createLogger({
 });
 
 app.get('/', (req, res) => {
-  logger.info(req.body)
+  logger.info(JSON.stringify(req.query))
+  res.sendStatus(200)
+})
+
+app.post('/', (req, res) => {
+  logger.info(JSON.stringify(req.body))
   res.sendStatus(200)
 })
 

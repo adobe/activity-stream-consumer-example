@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "test": "test"
+    "start:standalone": "pm2 start index.js",
+    "stop:standalone": "pm2 stop index"
   },
   "author": "igrant@adobe.com",
   "license": "UNLICENSED",
