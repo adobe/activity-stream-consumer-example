@@ -9,7 +9,7 @@
     "stop:standalone": "pm2 stop index"
   },
   "author": "igrant@adobe.com",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "pm2": "^5.1.2",
